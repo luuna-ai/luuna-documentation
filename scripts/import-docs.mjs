@@ -139,6 +139,11 @@ function firstParagraph(markdown) {
   const paragraph = markdown.split(/\r?\n/).map(line => line.trim()).find(line => line && !line.startsWith('#') && !line.startsWith('```') && !line.startsWith('>')) ?? '';
   return plain(paragraph).slice(0, 230);
 }
+function generatedMarkdown(markdown) {
+  // Imported sources can contain hard-break spaces. Keep generated text files
+  // clean without changing the source pages embedded in the searchable corpus.
+  return markdown.replace(/[\t ]+$/gm, '').trimEnd();
+}
 function statusFor(file) {
   const base = path.basename(file).toUpperCase();
   if (['CHANGELOG.MD', 'UPSTREAM.MD', 'UPSTREAM-README.MD', 'V1_DONE.MD', 'V1_PLAN.MD', 'ROADMAP.MD', 'RUNBOOK.MD'].includes(base)) return 'historical';
@@ -195,7 +200,8 @@ const coverage = kept.find(doc => doc.slug === 'reference-coverage');
 if (coverage) {
   coverage.markdown = coverage.markdown
     .replace('- All 113 tracked Markdown documents in Luuna and its three pinned components.', '- The core Luuna documentation and generated references from its pinned source snapshot. Component repositories are documented independently below.')
-    .replace('- New overview, installation guide, troubleshooting and assistant documentation.', '- Five authored guides covering all four supporting components and their integration boundaries.');
+    .replace('- New overview, installation guide, troubleshooting and assistant documentation.', '- Five authored guides covering all four supporting components and their integration boundaries.')
+    .replace('| [Mulch ](/docs/components-atlas-docs-upstream-readme) | historical |\n', '');
   const scope = [
     '## Current component reference sources',
     '',
@@ -203,9 +209,9 @@ if (coverage) {
     '',
     '| Component | Repository snapshot in these docs | Commit pinned by core Luuna |',
     '| --- | --- | --- |',
-    '| Atlas | [`' + commits.atlas.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-atlas/tree/' + commits.atlas + ') | [`76ad209`](https://github.com/luuna-ai/luuna-atlas/tree/76ad209daf404dd9a12aeaf46293e05e9f41e517) |',
-    '| Missions | [`' + commits.missions.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-missions/tree/' + commits.missions + ') | [`e1b5db1`](https://github.com/luuna-ai/luuna-missions/tree/e1b5db171892de653e7462e630d64d4964d01422) |',
-    '| Beacon | [`' + commits.beacon.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-beacon/tree/' + commits.beacon + ') | [`072e482`](https://github.com/luuna-ai/luuna-beacon/tree/072e482169e0d469c3744ec712222f8b310fa7da) |',
+    '| Atlas | [`' + commits.atlas.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-atlas/tree/' + commits.atlas + ') | [`27477c3`](https://github.com/luuna-ai/luuna-atlas/tree/27477c313a3049b1579dfdc32c39da600726721f) |',
+    '| Missions | [`' + commits.missions.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-missions/tree/' + commits.missions + ') | [`6a4a3c3`](https://github.com/luuna-ai/luuna-missions/tree/6a4a3c3fb80679a77bbf1d7d2da05033fc15460c) |',
+    '| Beacon | [`' + commits.beacon.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-beacon/tree/' + commits.beacon + ') | [`4b01d37`](https://github.com/luuna-ai/luuna-beacon/tree/4b01d37522ef448ada78be08cc7a24f7808dfbbb) |',
     '| Luuna AI | [`' + commits.ai.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-ai/tree/' + commits.ai + ') | Independently maintained desktop app; not a core submodule |',
     '',
     'The file inventory under “Other tracked files” below describes the core Luuna checkout and its three submodules at the core snapshot; it is not an inventory of every file in the current independent component repositories.',
@@ -266,8 +272,8 @@ meta.date = new Date().toISOString().slice(0, 10);
 meta.components = definitions.map(item => ({ name: item.title, repository: item.repo, commit: commits[item.id], documents: componentDocs.filter(doc => doc.path.startsWith(`components/${item.id}/`)).length }));
 fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2) + '\n');
 
-const llms = ['# Luuna documentation', '', 'Public documentation snapshot. Component references are pinned to the source commit recorded in data/meta.json.', '', ...allDocs.map(doc => `- [${doc.title}](/docs/${doc.slug}): ${doc.description}`)].join('\n');
+const llms = ['# Luuna documentation', '', 'Public documentation snapshot. Component references are pinned to the source commit recorded in data/meta.json.', '', ...allDocs.map(doc => `- [${doc.title}](/docs/${doc.slug}): ${generatedMarkdown(doc.description)}`.trimEnd())].join('\n');
 fs.writeFileSync('public/llms.txt', `${llms}\n`);
-const llmsFull = ['# Luuna documentation: full text', '', ...allDocs.map(doc => `## ${doc.title}\n\nSource: ${doc.source}\nCommit: ${doc.commit}\n\n${doc.markdown}`)].join('\n\n---\n\n');
+const llmsFull = ['# Luuna documentation: full text', '', ...allDocs.map(doc => `## ${doc.title}\n\nSource: ${doc.source}\nCommit: ${doc.commit}\n\n${generatedMarkdown(doc.markdown)}`)].join('\n\n---\n\n');
 fs.writeFileSync('public/llms-full.txt', `${llmsFull}\n`);
 console.log(JSON.stringify({ documents: allDocs.length, componentDocuments: componentDocs.length, passages: chunks.length, components: meta.components }, null, 2));

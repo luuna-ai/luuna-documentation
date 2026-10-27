@@ -22,7 +22,7 @@ bun src/cli.ts --help
 bun run verify
 ```
 
-Start with the [Atlas README](/docs/components-atlas-readme), then consult the [configuration guide](/docs/components-atlas-config), [migration notes](/docs/components-atlas-migration), and the original [Mulch README](/docs/components-atlas-docs-upstream-readme) for inherited command examples. Some inherited help text and generated integration snippets retain the `ml` or `mulch` names; the aliases preserve compatibility.
+Start with the [Atlas README](/docs/components-atlas-readme), then consult the [configuration guide](/docs/components-atlas-config) and [migration notes](/docs/components-atlas-migration) for current command and data compatibility details. The current Atlas source no longer includes a copied upstream README. Some inherited help text and generated integration snippets retain the `ml` or `mulch` names; the aliases preserve compatibility.
 
 ## Maintenance and provenance
 
