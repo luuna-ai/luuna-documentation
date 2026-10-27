@@ -3740,12 +3740,12 @@ workspace path; an export must not.
 
 ## Atlas
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/README.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/README.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Luuna Atlas
 
-Structured expertise and project memory. This is Luuna's maintained MIT-licensed component. The Luuna package identity is **@luuna/atlas-cli**. It is maintained in the independent public repository [brodynelly/luuna-atlas](https://github.com/brodynelly/luuna-atlas). The npm package remains private and unpublished.
+Structured expertise and project memory. This is Luuna's maintained MIT-licensed component. The Luuna package identity is **@luuna/atlas-cli**. It is maintained in [luuna-ai/luuna-atlas](https://github.com/luuna-ai/luuna-atlas). The npm package remains private and unpublished.
 
 The CLI and library behavior are implemented in Go. For development, install Go 1.27.0 and Bun 1.4.3, then run from this directory:
 
@@ -3766,7 +3766,7 @@ Self-upgrade is disabled while the package is private. Update through a reviewed
 
 Read [UPSTREAM.md](/docs/components-atlas-upstream) for attribution and provenance, [AGENTS.md](/docs/components-atlas-agents) for development rules and [MIGRATION.md](/docs/components-atlas-migration) for layout changes. Upstream release/runbook documents are historical references and do not authorize publication.
 
-For the command, record, configuration and integration tour used as the rewrite baseline, read the [CLI and system map](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CLI-SYSTEM-MAP.md). The companion [CLI reference](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CLI-REFERENCE.md) captures help for every command and config subcommand. The [Go rewrite report](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/GO-REWRITE-REPORT.md) maps the current architecture, command coverage and verification. Baseline source links resolve to the frozen TypeScript oracle in `compat/reference/`; current Go source is in `cmd/luuna-atlas/` and `internal/atlas/`.
+For the command, record, configuration and integration tour used as the rewrite baseline, read the [CLI and system map](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CLI-SYSTEM-MAP.md). The companion [CLI reference](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CLI-REFERENCE.md) captures help for every command and config subcommand. The [Go rewrite report](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/GO-REWRITE-REPORT.md) maps the current architecture, command coverage and verification. Baseline source links resolve to the frozen TypeScript oracle in `compat/reference/`; current Go source is in `cmd/luuna-atlas/` and `internal/atlas/`.
 
 ## Origin / attribution
 
@@ -3774,7 +3774,7 @@ Luuna Atlas is derived from Mulch 0.11.0 by Jaymin West (MIT), https://github.co
 
 ## Maintenance and releases
 
-The repository owner and release maintainer is `brodynelly`. CI is configured to run the supported `bun run verify` surface on Linux and Windows with Go 1.27.0 and Bun 1.4.3. It checks Go formatting, builds native executable aliases, runs go vet and Go tests, then type checks the compatibility surface, validates repository instructions and runs Bun tests. Differential tests compare Go outputs and persisted state with the frozen oracle; historical internal Bun unit tests validate that reference, while public CLI/API tests exercise Go. Race detection is available separately through `bun run go:test:race` on a host with a supported C compiler.
+The repository is maintained by the luuna-ai organization. CI is configured to run the supported `bun run verify` surface on Linux and Windows with Go 1.27.0 and Bun 1.4.3. It checks Go formatting, builds native executable aliases, runs go vet and Go tests, then type checks the compatibility surface, validates repository instructions and runs Bun tests. Differential tests compare Go outputs and persisted state with the frozen oracle; historical internal Bun unit tests validate that reference, while public CLI/API tests exercise Go. Race detection is available separately through `bun run go:test:race` on a host with a supported C compiler.
 
 Registry publishing is disabled and requires no npm token. Luuna pins a reviewed commit, never a floating branch; update its submodule only after CI and the consumer smoke pass. See [MIGRATION.md](/docs/components-atlas-migration) for the verified source baseline. Dependency installation does not build executables or change Git hooks.
 
@@ -3782,8 +3782,8 @@ Registry publishing is disabled and requires no npm token. Luuna pins a reviewed
 
 ## Atlas: Atlas — V1 Scope
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/V1_DONE.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/V1_DONE.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas — V1 Scope
 
@@ -3918,8 +3918,8 @@ The only open deferred items are the `rank` command (atlas-cky, P3) and semantic
 
 ## Atlas: Atlas Configuration Guide
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CONFIG.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CONFIG.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas Configuration Guide
 
@@ -4878,8 +4878,8 @@ Lock files (`.luuna/atlas/expertise/<domain>.jsonl.lock` and similar) are create
 
 ## Atlas: Atlas license
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/LICENSE
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/LICENSE
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas license
 
@@ -4909,8 +4909,8 @@ SOFTWARE.
 
 ## Atlas: Atlas Operations Runbook
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/RUNBOOK.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/RUNBOOK.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas Operations Runbook
 
@@ -5213,8 +5213,8 @@ npm view @luuna/atlas-cli dist-tags
 
 ## Atlas: Atlas Roadmap
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/ROADMAP.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/ROADMAP.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas Roadmap
 
@@ -5795,8 +5795,8 @@ A first cut at order of attack — not committed:
 
 ## Atlas: Atlas v1.0.0 Plan
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/V1_PLAN.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/V1_PLAN.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Atlas v1.0.0 Plan
 
@@ -6024,8 +6024,8 @@ Adopting the original framing's deferral list and adding two:
 
 ## Atlas: Changelog
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CHANGELOG.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CHANGELOG.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Changelog
 
@@ -6932,12 +6932,12 @@ Per-domain governance, lifecycle hooks, soft-archive prune, and pluggable provid
 
 ## Atlas: Contributing to Luuna Atlas
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CONTRIBUTING.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CONTRIBUTING.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Contributing to Luuna Atlas
 
-Atlas is an independent MIT-licensed Luuna component maintained by brodynelly. Read [AGENTS.md](/docs/components-atlas-agents) before changing it. Provenance and the original notice are in [UPSTREAM.md](/docs/components-atlas-upstream) and [LICENSE](/docs/components-atlas-license).
+Atlas is an independent MIT-licensed Luuna component maintained by the luuna-ai organization. Read [AGENTS.md](/docs/components-atlas-agents) before changing it. Provenance and the original notice are in [UPSTREAM.md](/docs/components-atlas-upstream) and [LICENSE](/docs/components-atlas-license).
 
 ## Development
 
@@ -6973,7 +6973,7 @@ bun test test/native-api.test.ts --timeout 30000
 - Keep legacy names and the one-way store migration centralized in `internal/atlas/legacy_layout.go`.
 - Configuration/data live in the user's project under `.luuna/atlas/`. Tests must use disposable projects rather than this checkout or imported authoring stores.
 
-For current source and command coverage, read [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/GO-REWRITE-REPORT.md). The broader [system map](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CLI-SYSTEM-MAP.md) documents the compatibility baseline and Luuna integrations.
+For current source and command coverage, read [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/GO-REWRITE-REPORT.md). The broader [system map](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CLI-SYSTEM-MAP.md) documents the compatibility baseline and Luuna integrations.
 
 ## Testing
 
@@ -6989,14 +6989,14 @@ Keep each change focused and describe the resulting behavior and meaningful vali
 
 The package remains private and unpublished. Registry publication and upstream/self-upgrade require a separate reviewed release process. Luuna consumes an exact reviewed Git commit through its submodule; runtime policy and approval enforcement belong in Luuna.
 
-Use [GitHub Issues](https://github.com/brodynelly/luuna-atlas/issues) when you choose to report a bug. Security guidance is in [SECURITY.md](/docs/components-atlas-security). Contributions retain the [MIT License](/docs/components-atlas-license).
+Use [GitHub Issues](https://github.com/luuna-ai/luuna-atlas/issues) when you choose to report a bug. Security guidance is in [SECURITY.md](/docs/components-atlas-security). Contributions retain the [MIT License](/docs/components-atlas-license).
 
 ---
 
 ## Atlas: Luuna Atlas
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/CLAUDE.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/CLAUDE.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Luuna Atlas
 
@@ -7008,8 +7008,8 @@ The implementation is native Go in `cmd/luuna-atlas/` and `internal/atlas/`. `sr
 
 ## Atlas: Luuna Atlas development
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/AGENTS.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/AGENTS.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Luuna Atlas development
 
@@ -7041,12 +7041,12 @@ Do not commit or push unless explicitly requested. Report remaining work without
 
 ## Atlas: Native release artifacts: status summary
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/docs/NATIVE-RELEASE.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/docs/NATIVE-RELEASE.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Native release artifacts: status summary
 
-This page summarizes the native archive work for Atlas (task C-atlas) and where it stands now. The full procedure is in [RELEASING.md](/docs/components-atlas-docs-releasing). The scope comes from [specs/chore-native-release.md](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/specs/chore-native-release.md) and the review fixes from [specs/patch-native-release-review.md](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/specs/patch-native-release-review.md).
+This page summarizes the native archive work for Atlas (task C-atlas) and where it stands now. The full procedure is in [RELEASING.md](/docs/components-atlas-docs-releasing). The scope comes from [specs/chore-native-release.md](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/specs/chore-native-release.md) and the review fixes from [specs/patch-native-release-review.md](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/specs/patch-native-release-review.md).
 
 ## Scope: manual artifacts only
 
@@ -7101,7 +7101,7 @@ This is self-reported metadata (`"attestation": null`), not a verifiable attesta
 | Bun test suite | 1608 passed |
 | `bun run verify` (full component contract) | passed with Go 1.27.0 and Bun 1.4.3 |
 
-**Shipping validation:** a checksum-verified Go **1.27.0** SDK was installed repo-locally under `.tac/tools/go1.27.0/go`; the system Go installation and version pins were not changed. The default macOS `TMPDIR` exposed a symlink-path mismatch in the parity test harness. [The test-only patch](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/specs/patch-native-release-parity-paths.md) canonicalizes fixture roots without changing product path semantics, reference outputs or normalization rules. Full `bun run verify` then passed independently with the original `TMPDIR` unchanged.
+**Shipping validation:** a checksum-verified Go **1.27.0** SDK was installed repo-locally under `.tac/tools/go1.27.0/go`; the system Go installation and version pins were not changed. The default macOS `TMPDIR` exposed a symlink-path mismatch in the parity test harness. [The test-only patch](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/specs/patch-native-release-parity-paths.md) canonicalizes fixture roots without changing product path semantics, reference outputs or normalization rules. Full `bun run verify` then passed independently with the original `TMPDIR` unchanged.
 
 Also not proven:
 
@@ -7113,8 +7113,8 @@ Also not proven:
 
 ## Atlas: Releasing native Atlas archives
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/docs/RELEASING.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/docs/RELEASING.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Releasing native Atlas archives
 
@@ -7195,8 +7195,8 @@ Toolchain pin limitation: `go.mod` declares `go 1.27.0` and CI's `setup-go` inst
 
 ## Atlas: Repository extraction, October 21, 2026
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/MIGRATION.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/MIGRATION.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Repository extraction, October 21, 2026
 
@@ -7228,14 +7228,14 @@ The CLI and library operations were rewritten in Go against Atlas commit `27477c
 
 Development now requires Go 1.27.0 and Bun 1.4.3. Go dependencies are vendored. `bun run build:native` produces the standalone executable and aliases; `bun run verify` checks the native implementation and compatibility surfaces. Existing TypeScript entry points call Go. The former implementation is a frozen test oracle under `compat/reference/`, excluded from production packaging and execution.
 
-See [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/GO-REWRITE-REPORT.md) for architecture, command coverage and verification. This rewrite does not update a Luuna consumer pin, publish a package or change runtime policy. Those steps retain their separate review requirements.
+See [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/GO-REWRITE-REPORT.md) for architecture, command coverage and verification. This rewrite does not update a Luuna consumer pin, publish a package or change runtime policy. Those steps retain their separate review requirements.
 
 ---
 
 ## Atlas: Security Policy
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/SECURITY.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/SECURITY.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Security Policy
 
@@ -7252,9 +7252,9 @@ Only the latest release on the current major version line receives security upda
 
 **Do not open a public issue for security vulnerabilities.**
 
-Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/brodynelly/luuna-atlas/security/advisories).
+Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/luuna-ai/luuna-atlas/security/advisories).
 
-1. Go to the [Security Advisories page](https://github.com/brodynelly/luuna-atlas/security/advisories)
+1. Go to the [Security Advisories page](https://github.com/luuna-ai/luuna-atlas/security/advisories)
 2. Click **"New draft security advisory"**
 3. Fill in a description of the vulnerability, including steps to reproduce if possible
 
@@ -7333,8 +7333,8 @@ Atlas is a pinned Luuna submodule sourced from the public [`luuna-ai/luuna-atlas
 
 ## Atlas: Upstream provenance
 
-Source: https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/UPSTREAM.md
-Commit: 01d84010d232e56a66249d8ae84969fea67070dd
+Source: https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/UPSTREAM.md
+Commit: ce9c9c824c491dcb4fce53e7f6c4735477957147
 
 # Upstream provenance
 
@@ -7350,9 +7350,9 @@ The original MIT LICENSE is preserved verbatim. Luuna modifications are also lic
 
 Luuna changes include branding, private package metadata, safe installation without Git-hook mutation, current agent guidance, and removal of imported authoring/session records. Storage formats, historical command aliases, exported type names, environment variables, schema fields, and integration markers retain upstream compatibility.
 
-The current implementation was rewritten in Go against the Luuna Atlas `0.11.0` compatibility baseline at commit `27477c313a3049b1579dfdc32c39da600726721f`. The former TypeScript implementation is retained only as a frozen development oracle in `compat/reference/`; it is excluded from production execution and packaging. Existing TypeScript entry points transport operations to Go. This rewrite does not change the original MIT attribution or authorize registry publication. See [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/01d84010d232e56a66249d8ae84969fea67070dd/GO-REWRITE-REPORT.md).
+The current implementation was rewritten in Go against the Luuna Atlas `0.11.0` compatibility baseline at commit `27477c313a3049b1579dfdc32c39da600726721f`. The former TypeScript implementation is retained only as a frozen development oracle in `compat/reference/`; it is excluded from production execution and packaging. Existing TypeScript entry points transport operations to Go. This rewrite does not change the original MIT attribution or authorize registry publication. See [GO-REWRITE-REPORT.md](https://github.com/luuna-ai/luuna-atlas/blob/ce9c9c824c491dcb4fce53e7f6c4735477957147/GO-REWRITE-REPORT.md).
 
-This maintained distribution now lives in https://github.com/brodynelly/luuna-atlas. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in brodynelly/luuna at the import source recorded above. See MIGRATION.md.
+This maintained distribution is currently published at https://github.com/luuna-ai/luuna-atlas. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in the original Luuna core repository at the import source recorded above. See MIGRATION.md.
 
 Imported agent instructions and authoring metadata were preserved locally before removal from the working tree. They must not be loaded as Luuna project state. Historical documentation remains reference material; current component development starts with this repository's AGENTS.md. Luuna runtime policy remains in the Luuna repository.
 
@@ -7360,12 +7360,12 @@ Imported agent instructions and authoring metadata were preserved locally before
 
 ## Beacon
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/README.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/README.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon
 
-Prompt composition and versioned agent instructions. It is maintained in the independent public repository [brodynelly/luuna-beacon](https://github.com/brodynelly/luuna-beacon).
+Prompt composition and versioned agent instructions. It is maintained in [luuna-ai/luuna-beacon](https://github.com/luuna-ai/luuna-beacon).
 
 Run from this directory with Go 1.27.0:
 
@@ -7404,7 +7404,7 @@ Read [UPSTREAM.md](/docs/components-beacon-upstream) for attribution and provena
 
 ## Maintenance and releases
 
-The repository owner and release maintainer is `brodynelly`. CI runs Go tests, vet, and builds on Linux and Windows. Registry publishing is disabled. Luuna pins a reviewed commit, never a floating branch; update its submodule only after CI and the consumer smoke pass. See [MIGRATION.md](/docs/components-beacon-migration) for the verified source baseline.
+The repository is maintained by the luuna-ai organization. CI runs Go tests, vet, and builds on Linux and Windows. Registry publishing is disabled. Luuna pins a reviewed commit, never a floating branch; update its submodule only after CI and the consumer smoke pass. See [MIGRATION.md](/docs/components-beacon-migration) for the verified source baseline.
 
 ## Origin / attribution
 
@@ -7414,8 +7414,8 @@ Luuna Beacon is Luuna's maintained MIT-licensed fork of [Canopy](https://github.
 
 ## Beacon: Beacon license
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/LICENSE
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/LICENSE
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Beacon license
 
@@ -7445,8 +7445,8 @@ SOFTWARE.
 
 ## Beacon: Canopy
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/UPSTREAM-README.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/UPSTREAM-README.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 > Historical upstream reference. Use the current component README for Luuna installation and identity.
 
@@ -7590,7 +7590,7 @@ Writes hold the `config.yaml` advisory lock, atomically rename `.tmp.{random}` o
 
 ## Architecture
 
-Canopy stores prompts as versioned JSONL records in `.canopy/prompts.jsonl`, with validation schemas in `schemas.jsonl` and project config in `config.yaml`. Prompts are composed via single inheritance (`extends`) and multi-inheritance (`mixins`) — a child inherits sections from its parent chain plus any mixin prompts, and can override, append, or remove individual sections (up to 5 levels deep with circular reference detection). The `cn emit` pipeline renders resolved prompts to plain `.md` files (or `.ts` modules when `emitAs` ends in `.ts`) for downstream agent consumption. Advisory file locks and atomic writes ensure concurrent-safe access. See [CLAUDE.md](https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/CLAUDE.md) for full technical details.
+Canopy stores prompts as versioned JSONL records in `.canopy/prompts.jsonl`, with validation schemas in `schemas.jsonl` and project config in `config.yaml`. Prompts are composed via single inheritance (`extends`) and multi-inheritance (`mixins`) — a child inherits sections from its parent chain plus any mixin prompts, and can override, append, or remove individual sections (up to 5 levels deep with circular reference detection). The `cn emit` pipeline renders resolved prompts to plain `.md` files (or `.ts` modules when `emitAs` ends in `.ts`) for downstream agent consumption. Advisory file locks and atomic writes ensure concurrent-safe access. See [CLAUDE.md](https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/CLAUDE.md) for full technical details.
 
 ## How It Works
 
@@ -7686,9 +7686,9 @@ Canopy is part of the [os-eco](https://github.com/jayminwest/os-eco) AI agent to
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/CONTRIBUTING.md) for guidelines on setting up a development environment, coding conventions, and submitting pull requests.
+Contributions are welcome! See [CONTRIBUTING.md](https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/CONTRIBUTING.md) for guidelines on setting up a development environment, coding conventions, and submitting pull requests.
 
-For security issues, see [SECURITY.md](https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/SECURITY.md).
+For security issues, see [SECURITY.md](https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/SECURITY.md).
 
 ## License
 
@@ -7698,8 +7698,8 @@ MIT
 
 ## Beacon: Changelog
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/CHANGELOG.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/CHANGELOG.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Changelog
 
@@ -8005,8 +8005,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Beacon: Contributing to Luuna Beacon
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/CONTRIBUTING.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/CONTRIBUTING.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Contributing to Luuna Beacon
 
@@ -8042,8 +8042,8 @@ Keep one concern per pull request, explain the behavior change and evidence, and
 
 ## Beacon: Luuna Beacon
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/CLAUDE.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/CLAUDE.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon
 
@@ -8053,8 +8053,8 @@ Read [AGENTS.md](/docs/components-beacon-agents) for current development instruc
 
 ## Beacon: Luuna Beacon — V1 Scope
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/V1_DONE.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/V1_DONE.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon — V1 Scope
 
@@ -8191,8 +8191,8 @@ The tool handles the full prompt lifecycle: create, compose via inheritance, ver
 
 ## Beacon: Luuna Beacon CLI reference
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/cli-reference.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/cli-reference.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon CLI reference
 
@@ -9188,8 +9188,8 @@ luuna-beacon validate [name] [options]
 
 ## Beacon: Luuna Beacon development
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/AGENTS.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/AGENTS.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon development
 
@@ -9218,8 +9218,8 @@ Do not commit or push unless explicitly requested. Report remaining work without
 
 ## Beacon: Luuna Beacon Operations Runbook
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/RUNBOOK.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/RUNBOOK.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon Operations Runbook
 
@@ -9237,7 +9237,7 @@ record, see `SPEC.md`. For architecture orientation, see
 
 - `bun --version` ≥ the version in `package.json` `engines.bun` (≥ 1.0).
 - `gh auth status` → authenticated, with `repo` + `workflow` scopes.
-- `git remote -v` shows the canonical origin (`github.com/brodynelly/luuna-beacon`).
+- `git remote -v` shows the canonical origin (`github.com/luuna-ai/luuna-beacon`).
 - For npm publish: `npm whoami` → `jayminwest`; 2FA enabled on the
   account.
 - Local working tree on `main`, fully up to date, `git status` clean.
@@ -9517,8 +9517,8 @@ npm view @luuna/beacon-cli dist-tags
 
 ## Beacon: Luuna Beacon specification
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/SPEC.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/SPEC.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Luuna Beacon specification
 
@@ -9574,8 +9574,8 @@ CI runs that gate on Linux and Windows. The project has no registry publication 
 
 ## Beacon: Native release packaging
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/NATIVE-RELEASE.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/NATIVE-RELEASE.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Native release packaging
 
@@ -9634,8 +9634,8 @@ Registry publication (npm or others) remains out of scope. See [RELEASING.md](/d
 
 ## Beacon: Releasing Luuna Beacon native archives
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/docs/RELEASING.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/docs/RELEASING.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Releasing Luuna Beacon native archives
 
@@ -9715,8 +9715,8 @@ npm and other registries remain unpublished and are a separate decision.
 
 ## Beacon: Repository extraction, October 21, 2026
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/MIGRATION.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/MIGRATION.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Repository extraction, October 21, 2026
 
@@ -9749,8 +9749,8 @@ Project data moved from the legacy project-root directory to `.luuna/beacon/`. F
 
 ## Beacon: Security Policy
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/SECURITY.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/SECURITY.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Security Policy
 
@@ -9766,9 +9766,9 @@ Only the latest release on the current major version line receives security upda
 
 **Do not open a public issue for security vulnerabilities.**
 
-Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/brodynelly/luuna-beacon/security/advisories).
+Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/luuna-ai/luuna-beacon/security/advisories).
 
-1. Go to the [Security Advisories page](https://github.com/brodynelly/luuna-beacon/security/advisories)
+1. Go to the [Security Advisories page](https://github.com/luuna-ai/luuna-beacon/security/advisories)
 2. Click **"New draft security advisory"**
 3. Fill in a description of the vulnerability, including steps to reproduce if possible
 
@@ -9810,8 +9810,8 @@ If you believe any of these measures can be bypassed, please report it through t
 
 ## Beacon: Upstream provenance
 
-Source: https://github.com/luuna-ai/luuna-beacon/blob/9d7331ca2150042503534e0183d38dc9019cbe33/UPSTREAM.md
-Commit: 9d7331ca2150042503534e0183d38dc9019cbe33
+Source: https://github.com/luuna-ai/luuna-beacon/blob/c94e67717ae166a17b8137768bb7b9a3edb7ad12/UPSTREAM.md
+Commit: c94e67717ae166a17b8137768bb7b9a3edb7ad12
 
 # Upstream provenance
 
@@ -9827,7 +9827,7 @@ The original MIT LICENSE is preserved verbatim. Luuna modifications are also lic
 
 Luuna changes include branding, private package metadata, safe installation without Git-hook mutation, current agent guidance, removal of imported authoring/session records, and compiling the fixed config validator before acquiring the write lock to prevent concurrent writers timing out. Storage formats, historical command aliases, exported type names, environment variables, schema fields, and integration markers retain upstream compatibility. No rewrite of the implementation is implied.
 
-This maintained distribution now lives in https://github.com/brodynelly/luuna-beacon. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in brodynelly/luuna at the import source recorded above. See MIGRATION.md.
+This maintained distribution is currently published at https://github.com/luuna-ai/luuna-beacon. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in the original Luuna core repository at the import source recorded above. See MIGRATION.md.
 
 Imported agent instructions and authoring metadata were preserved locally before removal from the working tree. They must not be loaded as Luuna project state. Historical documentation remains reference material; current component development starts with this repository's AGENTS.md. Luuna runtime policy remains in the Luuna repository.
 
@@ -10383,12 +10383,12 @@ Component behavior can change independently. This site pins each reference page 
 
 ## Missions
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/README.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/README.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Luuna Missions
 
-Git-native tickets and structured work plans. This is Luuna's maintained MIT-licensed fork of Seeds, imported from upstream version **0.6.0**. The Luuna package identity is **@luuna/missions-cli** in the independent public repository [brodynelly/luuna-missions](https://github.com/brodynelly/luuna-missions). The package remains private and unpublished.
+Git-native tickets and structured work plans. This is Luuna's maintained MIT-licensed fork of Seeds, imported from upstream version **0.6.0**. The Luuna package identity is **@luuna/missions-cli** in the independent public repository [luuna-ai/luuna-missions](https://github.com/luuna-ai/luuna-missions). The package remains private and unpublished.
 
 ## Run from a checkout
 
@@ -10416,7 +10416,7 @@ Project discovery walks upward from the working directory. A legacy `.seeds/` di
 
 The runtime is in `cmd/` and `internal/`. `src/index-legacy.ts` and the TypeScript modules under `src/` remain as the compatibility oracle for the differential test corpus. `bun run verify` runs the TypeScript type check, instruction check, Bun tests, Go tests, and Go-versus-TypeScript CLI parity cases. CI declares this surface on Linux and Windows using Bun 1.4.3 and the Go version in `go.mod`. See [AGENTS.md](/docs/components-missions-agents) for repository rules and [the system map](/docs/components-missions-docs-cli-system-map) for validation limits.
 
-The repository owner and release maintainer is `brodynelly`. Registry publishing is disabled and requires no npm token. Luuna pins a reviewed commit, never a floating branch; update its submodule only after CI and a consumer smoke pass. Read [UPSTREAM.md](/docs/components-missions-upstream) for provenance and [the original README](/docs/components-missions-docs-upstream-readme) for inherited command examples. Upstream release/runbook documents are historical references and do not authorize publication.
+The repository is maintained by the luuna-ai organization. Registry publishing is disabled and requires no npm token. Luuna pins a reviewed commit, never a floating branch; update its submodule only after CI and a consumer smoke pass. Read [UPSTREAM.md](/docs/components-missions-upstream) for provenance and [the original README](/docs/components-missions-docs-upstream-readme) for inherited command examples. Upstream release/runbook documents are historical references and do not authorize publication.
 
 ## Origin and attribution
 
@@ -10426,8 +10426,8 @@ Luuna Missions is derived from [Seeds](https://github.com/jayminwest/seeds) 0.6.
 
 ## Missions: Changelog
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/CHANGELOG.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/CHANGELOG.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Changelog
 
@@ -10905,8 +10905,8 @@ Nightwatch patrol fixes (plan pl-09b0): a batch of small correctness and consist
 
 ## Missions: Contributing to Missions
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/CONTRIBUTING.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/CONTRIBUTING.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Contributing to Missions
 
@@ -10974,7 +10974,7 @@ Always run all three before submitting a PR.
 
 ## Reporting Issues
 
-Use [GitHub Issues](https://github.com/brodynelly/luuna-missions/issues) for bug reports and feature requests. For security vulnerabilities, see [SECURITY.md](/docs/components-missions-security).
+Use [GitHub Issues](https://github.com/luuna-ai/luuna-missions/issues) for bug reports and feature requests. For security vulnerabilities, see [SECURITY.md](/docs/components-missions-security).
 
 ## License
 
@@ -11017,8 +11017,8 @@ Missions is consumed by Luuna at a reviewed Git submodule commit from [`luuna-ai
 
 ## Missions: Luuna Missions
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/CLAUDE.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/CLAUDE.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Luuna Missions
 
@@ -11028,8 +11028,8 @@ Read [AGENTS.md](/docs/components-missions-agents) for current development instr
 
 ## Missions: Luuna Missions CLI and system map
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/CLI-SYSTEM-MAP.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/CLI-SYSTEM-MAP.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Luuna Missions CLI and system map
 
@@ -11213,8 +11213,8 @@ Sources for this map: `cmd/luuna-missions/main.go`, `internal/cli/`, `internal/p
 
 ## Missions: Luuna Missions development
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/AGENTS.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/AGENTS.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Luuna Missions development
 
@@ -11244,8 +11244,8 @@ Do not commit or push unless explicitly requested. Report remaining work without
 
 ## Missions: Missions
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/SPEC.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/SPEC.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Missions
 
@@ -11820,8 +11820,8 @@ Project instructions for Claude Code sessions. Covers:
 
 ## Missions: Missions — V1 Scope
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/V1_DONE.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/V1_DONE.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Missions — V1 Scope
 
@@ -11974,8 +11974,8 @@ These items emerged from the test audit. Not blocking V1 release, but should be 
 
 ## Missions: Missions license
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/LICENSE
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/LICENSE
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Missions license
 
@@ -12005,8 +12005,8 @@ SOFTWARE.
 
 ## Missions: Missions Operations Runbook
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/RUNBOOK.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/RUNBOOK.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Missions Operations Runbook
 
@@ -12025,7 +12025,7 @@ record see `SPEC.md`. This is a procedural document — read it as
 - `bun --version` ≥ the `engines.bun` floor in `package.json` (≥ 1.0).
 - `gh auth status` → authenticated, with `repo` + `workflow` scopes.
 - `git remote -v` shows the canonical origin
-  (`github.com/brodynelly/luuna-missions`).
+  (`github.com/luuna-ai/luuna-missions`).
 - `npm whoami` → `jayminwest`, with 2FA enabled, if you ever need a
   manual publish.
 - Local tree on `main`, fully up to date, `git status` clean.
@@ -12248,8 +12248,8 @@ npm view @luuna/missions-cli dist-tags
 
 ## Missions: Missions: luuna-missions plan — Planning Facilitation
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/PLAN_SPEC.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/PLAN_SPEC.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Missions: `luuna-missions plan` — Planning Facilitation
 
@@ -12858,8 +12858,8 @@ The default optimizes for autonomous swarms; opt-in rigor for teams that need it
 
 ## Missions: Native release: quick reference
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/NATIVE-RELEASE.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/NATIVE-RELEASE.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Native release: quick reference
 
@@ -12912,8 +12912,8 @@ PATH="$PWD/.tac/tools/bin:$PATH" bun run verify
 
 ## Missions: Releasing native Luuna Missions archives
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/RELEASING.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/RELEASING.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Releasing native Luuna Missions archives
 
@@ -13009,8 +13009,8 @@ npm publication of `@luuna/missions-cli` remains separate and unpublished.
 
 ## Missions: Repository extraction, October 21, 2026
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/MIGRATION.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/MIGRATION.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Repository extraction, October 21, 2026
 
@@ -13042,8 +13042,8 @@ The owner requested the explicit luuna-* repository names on October 21, 2026. G
 
 ## Missions: Security Policy
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/SECURITY.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/SECURITY.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Security Policy
 
@@ -13060,9 +13060,9 @@ Only the latest release on the current major version line receives security upda
 
 **Do not open a public issue for security vulnerabilities.**
 
-Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/brodynelly/luuna-missions/security/advisories).
+Please report vulnerabilities privately through [GitHub Security Advisories](https://github.com/luuna-ai/luuna-missions/security/advisories).
 
-1. Go to the [Security Advisories page](https://github.com/brodynelly/luuna-missions/security/advisories)
+1. Go to the [Security Advisories page](https://github.com/luuna-ai/luuna-missions/security/advisories)
 2. Click **"New draft security advisory"**
 3. Fill in a description of the vulnerability, including steps to reproduce if possible
 
@@ -13102,8 +13102,8 @@ Missions already implements several hardening measures:
 
 ## Missions: Seeds
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/UPSTREAM-README.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/UPSTREAM-README.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 > Historical upstream reference. Use the current component README for Luuna installation and identity.
 
@@ -13451,7 +13451,7 @@ Rejections are fail-fast and pre-write (both `plans.jsonl` and `issues.jsonl` ar
 
 Reassigning a seed across plans is two explicit steps: `sd plan release <other-pl> <seed>` first, then adopt.
 
-Full spec: see [PLAN_SPEC.md](https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/PLAN_SPEC.md).
+Full spec: see [PLAN_SPEC.md](https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/PLAN_SPEC.md).
 
 ## Extensions
 
@@ -13521,7 +13521,7 @@ Writes hold the `config.yaml` advisory lock and validate the post-write file as 
 
 ## Architecture
 
-Seeds stores all data in JSONL files inside a `.seeds/` directory — one JSON object per line, fully diffable and mergeable via git. Advisory file locks (`O_CREAT | O_EXCL`) and atomic writes (temp file + rename) ensure safe concurrent access from multiple agents. The `merge=union` gitattribute handles parallel branch merges; dedup-on-read (last occurrence wins) resolves any duplicates. See [CLAUDE.md](https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/CLAUDE.md) for full technical details.
+Seeds stores all data in JSONL files inside a `.seeds/` directory — one JSON object per line, fully diffable and mergeable via git. Advisory file locks (`O_CREAT | O_EXCL`) and atomic writes (temp file + rename) ensure safe concurrent access from multiple agents. The `merge=union` gitattribute handles parallel branch merges; dedup-on-read (last occurrence wins) resolves any duplicates. See [CLAUDE.md](https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/CLAUDE.md) for full technical details.
 
 ## Priority Scale
 
@@ -13578,7 +13578,7 @@ Seeds is part of the [os-eco](https://github.com/jayminwest/os-eco) AI agent too
 
 ## Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/docs/CONTRIBUTING.md) for guidelines.
+Contributions are welcome! See [CONTRIBUTING.md](https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/docs/CONTRIBUTING.md) for guidelines.
 
 ## License
 
@@ -13588,8 +13588,8 @@ MIT
 
 ## Missions: Upstream provenance
 
-Source: https://github.com/luuna-ai/luuna-missions/blob/ccac7b128bb21257fc93551599fdb81031f1b75c/UPSTREAM.md
-Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
+Source: https://github.com/luuna-ai/luuna-missions/blob/4c334088b17ace4ee18b0e55c85378743efb4f90/UPSTREAM.md
+Commit: 4c334088b17ace4ee18b0e55c85378743efb4f90
 
 # Upstream provenance
 
@@ -13597,7 +13597,7 @@ Commit: ccac7b128bb21257fc93551599fdb81031f1b75c
 - Original package: @os-eco/seeds-cli
 - Upstream repository: https://github.com/jayminwest/seeds
 - Imported upstream version: 0.6.0
-- Import source: the tracked seeds/ tree in brodynelly/luuna at commit 532048d1839d003d724e55e8a47dbfdc44145004 (see repository history for the full tree).
+- Import source: the tracked seeds/ tree in the original Luuna core repository at commit 532048d1839d003d724e55e8a47dbfdc44145004 (see repository history for the full tree).
 - Luuna identity: @luuna/missions-cli, in components/missions/.
 - Upstream copyright holder and author: Jaymin West, as retained in LICENSE and package authorship.
 
@@ -13605,7 +13605,7 @@ The original MIT LICENSE is preserved verbatim. Luuna modifications are also lic
 
 Luuna changes include branding, private package metadata, safe installation without Git-hook mutation, current agent guidance, and removal of imported authoring/session records. Storage formats, historical command aliases, exported type names, environment variables, schema fields, and integration markers retain upstream compatibility. No rewrite of the implementation is implied.
 
-This maintained distribution now lives in https://github.com/brodynelly/luuna-missions. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in brodynelly/luuna at the import source recorded above. See MIGRATION.md.
+This maintained distribution is currently published at https://github.com/luuna-ai/luuna-missions. Luuna consumes it as an exact-commit Git submodule. The package remains private and unpublished. The component-scoped history was extracted with git subtree split; the original pre-branding history remains in the original Luuna core repository at the import source recorded above. See MIGRATION.md.
 
 Imported agent instructions and authoring metadata were preserved locally before removal from the working tree. They must not be loaded as Luuna project state. Historical documentation remains reference material; current component development starts with this repository's AGENTS.md. Luuna runtime policy remains in the Luuna repository.
 

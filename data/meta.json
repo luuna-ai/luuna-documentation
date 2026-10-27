@@ -15,19 +15,19 @@
     {
       "name": "Atlas",
       "repository": "luuna-atlas",
-      "commit": "01d84010d232e56a66249d8ae84969fea67070dd",
+      "commit": "ce9c9c824c491dcb4fce53e7f6c4735477957147",
       "documents": 16
     },
     {
       "name": "Missions",
       "repository": "luuna-missions",
-      "commit": "ccac7b128bb21257fc93551599fdb81031f1b75c",
+      "commit": "4c334088b17ace4ee18b0e55c85378743efb4f90",
       "documents": 17
     },
     {
       "name": "Beacon",
       "repository": "luuna-beacon",
-      "commit": "9d7331ca2150042503534e0183d38dc9019cbe33",
+      "commit": "c94e67717ae166a17b8137768bb7b9a3edb7ad12",
       "documents": 16
     },
     {
