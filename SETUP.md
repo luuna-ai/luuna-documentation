@@ -7,10 +7,10 @@ The public Sites deployment is bound in `.openai/hosting.json`. Preserve that pr
 To refresh component references, clone the current repositories outside this site checkout, then pass each path to the importer:
 
 ```sh
-gh repo clone brodynelly/luuna-atlas ../.source-luuna-atlas
-gh repo clone brodynelly/luuna-missions ../.source-luuna-missions
-gh repo clone brodynelly/luuna-beacon ../.source-luuna-beacon
-gh repo clone brodynelly/luuna-ai ../.source-luuna-ai
+gh repo clone luuna-ai/luuna-atlas ../.source-luuna-atlas
+gh repo clone luuna-ai/luuna-missions ../.source-luuna-missions
+gh repo clone luuna-ai/luuna-beacon ../.source-luuna-beacon
+gh repo clone luuna-ai/luuna-ai ../.source-luuna-ai
 node scripts/import-docs.mjs --atlas ../.source-luuna-atlas --missions ../.source-luuna-missions --beacon ../.source-luuna-beacon --ai ../.source-luuna-ai
 ```
 

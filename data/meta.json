@@ -1,7 +1,7 @@
 {
   "commit": "87a7e3fea0416551e9ba61195ec5fff8f90a1989",
-  "date": "2026-10-22",
-  "documents": 160,
+  "date": "2026-10-27",
+  "documents": 167,
   "capabilities": 50,
   "routes": 43,
   "schemas": 12,
@@ -15,26 +15,26 @@
     {
       "name": "Atlas",
       "repository": "luuna-atlas",
-      "commit": "483288269415729879081ca47a063923b44d9c37",
-      "documents": 15
+      "commit": "ce9c9c824c491dcb4fce53e7f6c4735477957147",
+      "documents": 16
     },
     {
       "name": "Missions",
       "repository": "luuna-missions",
-      "commit": "f5638835510c9d4bab73c05b1076223553a3e907",
-      "documents": 14
+      "commit": "4c334088b17ace4ee18b0e55c85378743efb4f90",
+      "documents": 17
     },
     {
       "name": "Beacon",
       "repository": "luuna-beacon",
-      "commit": "b41ff4fed9493ab738680c119a5e58a3a9987c2b",
-      "documents": 14
+      "commit": "c94e67717ae166a17b8137768bb7b9a3edb7ad12",
+      "documents": 16
     },
     {
       "name": "Luuna AI",
       "repository": "luuna-ai",
-      "commit": "6f54fa53d2f75c0a923cd39eb654beedb3ffd4f0",
-      "documents": 3
+      "commit": "82d7d556d657acb8837b4983057e4e4d094abad7",
+      "documents": 4
     }
   ]
 }
