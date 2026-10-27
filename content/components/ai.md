@@ -21,4 +21,4 @@ The application requires the Pi coding agent to be available as a child process.
 
 ## Source, license, and status
 
-Luuna AI is maintained in the public [`brodynelly/luuna-ai`](https://github.com/brodynelly/luuna-ai) repository under MIT. Its README identifies it as an early beta and describes the Turbo Pascal homage; it is not affiliated with Borland. Follow the repository's release notes for current platform support and installable artifacts.
+Luuna AI is maintained in the public [`luuna-ai/luuna-ai`](https://github.com/luuna-ai/luuna-ai) repository under MIT. Its README identifies it as an early beta and describes the Turbo Pascal homage; it is not affiliated with Borland. Follow the repository's release notes for current platform support and installable artifacts.

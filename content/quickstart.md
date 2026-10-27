@@ -20,7 +20,7 @@ Use the repository pins and lockfiles. The package.json Node engine range is bro
 ## 2. Clone and install
 
 ```sh
-git clone --recurse-submodules https://github.com/brodynelly/luuna.git
+git clone --recurse-submodules https://github.com/luuna-ai/luuna.git
 cd luuna
 npm ci --ignore-scripts
 npm run components:setup

@@ -61,7 +61,7 @@ function slugForRepoFile(repoId, relative) {
   return `components-${repoId}-${slug(relative.replace(/\.(?:md|markdown)$/i, '').replace(/[/\\]/g, '-'))}`;
 }
 function sourceUrl(item, commit, relative) {
-  return `https://github.com/brodynelly/${item.repo}/blob/${commit}/${relative.split(path.sep).join('/')}`;
+  return `https://github.com/luuna-ai/${item.repo}/blob/${commit}/${relative.split(path.sep).join('/')}`;
 }
 function isInside(root, candidate) {
   const rel = path.relative(root, candidate);
@@ -178,7 +178,7 @@ for (const [relative, title, docSlug] of [
 ]) {
   const docPath = `content/components/${relative}`;
   const markdown = fs.readFileSync(docPath, 'utf8');
-  const doc = docFromMarkdown({ slug: docSlug, path: docPath, title, markdown, source: `https://github.com/brodynelly/luuna-documentation/blob/main/${docPath}`, commit: 'local-site-source', group: 'Components', status: 'current', ai: true });
+  const doc = docFromMarkdown({ slug: docSlug, path: docPath, title, markdown, source: `https://github.com/luuna-ai/luuna-documentation/blob/main/${docPath}`, commit: 'local-site-source', group: 'Components', status: 'current', ai: true });
   componentDocs.push(doc);
 }
 
@@ -203,10 +203,10 @@ if (coverage) {
     '',
     '| Component | Repository snapshot in these docs | Commit pinned by core Luuna |',
     '| --- | --- | --- |',
-    '| Atlas | [`' + commits.atlas.slice(0, 12) + '`](https://github.com/brodynelly/luuna-atlas/tree/' + commits.atlas + ') | [`76ad209`](https://github.com/brodynelly/luuna-atlas/tree/76ad209daf404dd9a12aeaf46293e05e9f41e517) |',
-    '| Missions | [`' + commits.missions.slice(0, 12) + '`](https://github.com/brodynelly/luuna-missions/tree/' + commits.missions + ') | [`e1b5db1`](https://github.com/brodynelly/luuna-missions/tree/e1b5db171892de653e7462e630d64d4964d01422) |',
-    '| Beacon | [`' + commits.beacon.slice(0, 12) + '`](https://github.com/brodynelly/luuna-beacon/tree/' + commits.beacon + ') | [`072e482`](https://github.com/brodynelly/luuna-beacon/tree/072e482169e0d469c3744ec712222f8b310fa7da) |',
-    '| Luuna AI | [`' + commits.ai.slice(0, 12) + '`](https://github.com/brodynelly/luuna-ai/tree/' + commits.ai + ') | Independently maintained desktop app; not a core submodule |',
+    '| Atlas | [`' + commits.atlas.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-atlas/tree/' + commits.atlas + ') | [`76ad209`](https://github.com/luuna-ai/luuna-atlas/tree/76ad209daf404dd9a12aeaf46293e05e9f41e517) |',
+    '| Missions | [`' + commits.missions.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-missions/tree/' + commits.missions + ') | [`e1b5db1`](https://github.com/luuna-ai/luuna-missions/tree/e1b5db171892de653e7462e630d64d4964d01422) |',
+    '| Beacon | [`' + commits.beacon.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-beacon/tree/' + commits.beacon + ') | [`072e482`](https://github.com/luuna-ai/luuna-beacon/tree/072e482169e0d469c3744ec712222f8b310fa7da) |',
+    '| Luuna AI | [`' + commits.ai.slice(0, 12) + '`](https://github.com/luuna-ai/luuna-ai/tree/' + commits.ai + ') | Independently maintained desktop app; not a core submodule |',
     '',
     'The file inventory under “Other tracked files” below describes the core Luuna checkout and its three submodules at the core snapshot; it is not an inventory of every file in the current independent component repositories.',
   ].join('\n');

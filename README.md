@@ -3,9 +3,9 @@
 A public, source-grounded documentation site for the Luuna development workbench and its four related components: Atlas, Missions, Beacon, and Luuna AI.
 
 - **Live site:** https://luuna-documentation.alight-bead-6697.chatgpt.site/
-- **Core source:** [brodynelly/luuna](https://github.com/brodynelly/luuna)
-- **Documentation source:** [brodynelly/luuna-documentation](https://github.com/brodynelly/luuna-documentation)
-- **Component sources:** [Atlas](https://github.com/brodynelly/luuna-atlas), [Missions](https://github.com/brodynelly/luuna-missions), [Beacon](https://github.com/brodynelly/luuna-beacon), and [Luuna AI](https://github.com/brodynelly/luuna-ai)
+- **Core source:** [luuna-ai/luuna](https://github.com/luuna-ai/luuna)
+- **Documentation source:** [luuna-ai/luuna-documentation](https://github.com/luuna-ai/luuna-documentation)
+- **Component sources:** [Atlas](https://github.com/luuna-ai/luuna-atlas), [Missions](https://github.com/luuna-ai/luuna-missions), [Beacon](https://github.com/luuna-ai/luuna-beacon), and [Luuna AI](https://github.com/luuna-ai/luuna-ai)
 
 The site contains the core Luuna guide, source references, capability/API/schema pages, and current component references. `data/meta.json` records source commits. Component docs follow each component repository head and can be newer than the revisions pinned into the core Luuna checkout. Check the documented core submodule pins before assuming a component feature is integrated in that Luuna revision.
 
